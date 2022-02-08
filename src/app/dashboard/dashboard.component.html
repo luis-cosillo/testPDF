@@ -1,0 +1,254 @@
+<!-- <div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+                <div class="page-categories">
+                    <h3 class="title text-center">TEST PDF</h3>
+                    <br />
+                    <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
+                        <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#link7" role="tablist">
+                            <i class="material-icons">info</i> Description
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#link8" role="tablist">
+                            <i class="material-icons">location_on</i> Location
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#link9" role="tablist">
+                            <i class="material-icons">gavel</i> Legal Info
+                        </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#link10" role="tablist">
+                            <i class="material-icons">help_outline</i> Help Center
+                        </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content tab-space tab-subcategories">
+                        <div class="tab-pane" id="link7">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Description about product</h4>
+                                    <p class="card-category">
+                                        More information here
+                                    </p>
+                                </div>
+                                <div class="card-body">
+                                    Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
+                                    <br>
+                                    <br> Dramatically visualize customer directed convergence without revolutionary ROI.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane active" id="link8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Location of the product</h4>
+                                    <p class="card-category">
+                                        More information here
+                                    </p>
+                                </div>
+                                <div class="card-body">
+                                    Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+                                    <br>
+                                    <br> Dramatically maintain clicks-and-mortar solutions without functional solutions.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="link9">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Legal info of the product</h4>
+                                    <p class="card-category">
+                                        More information here
+                                    </p>
+                                </div>
+                                <div class="card-body">
+                                    Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
+                                    <br>
+                                    <br>Dynamically innovate resource-leveling customer service for state of the art customer service.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="link10">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Help center</h4>
+                                    <p class="card-category">
+                                        More information here
+                                    </p>
+                                </div>
+                                <div class="card-body">
+                                    From the seamless transition of glass and metal to the streamlined profile, every detail was carefully considered to enhance your experience. So while its display is larger, the phone feels just right.
+                                    <br>
+                                    <br> Another Text. The first thing you notice when you hold the phone is how great it feels in your hand. The cover glass curves down around the sides to meet the anodized aluminum enclosure in a remarkable, simplified design.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+   -->
+
+
+
+   <div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card" data-color="blue">
+                    
+                        <div class="card-header card-header-info card-header-text">
+                            <div class="card-text">
+                                <h4 class="card-title">Pruebas</h4>
+                            </div>
+                        </div>
+                        <div class="card-body ml-3 mr-3">
+                            <div class="row">
+                                <div class="col">
+                                    <ngx-extended-pdf-viewer height="50%" 
+                                                            [listenToURL]="false"
+                                                            [src]="valorURLPDF"
+                                                            [useBrowserLocale]="true"  
+                                                            [textLayer]="true" 
+                                                            [showHandToolButton]="false" 
+                                                            [showPresentationModeButton]="false"
+                                                            [showOpenFileButton]="true" 
+                                                            (currentZoomFactor)="'100%'"
+                                                            [zoom]="'page-width'" 
+                                                            [showZoomButtons]="false" 
+                                                            [showRotateButton]="false"
+                                                            [showDownloadButton]="false"
+                                                            [showPrintButton]="false"
+                                                            [showBookmarkButton]="false"
+                                                            [showFindButton]="false" 
+                                                            [showSidebarButton]="false"
+                                                            [showScrollingButton]="false" 
+                                                            [showPropertiesButton]="false"
+                                                            [customToolbar]="additionalButtons" 
+                                                            >
+                                    </ngx-extended-pdf-viewer>
+                                    <ng-template #additionalButtons>
+                                        <div id="toolbarViewer">
+                                            <div id="toolbarViewerLeft">
+                                            <pdf-find-button [showFindButton]="true" [textLayer]="true"></pdf-find-button>
+                                            <pdf-paging-area></pdf-paging-area>
+                                            </div>
+                                            <div id="toolbarViewerRight">
+                                            <!-- <pdf-open-file></pdf-open-file> -->
+                                                
+                                            <button type="button" id="openFile"
+                                                class="toolbarButton new-tab"
+                                                title="Abrir archivo" >
+                                                <mat-icon class="text-info">open_in_browser</mat-icon>
+                                            </button>
+                                            
+                                            <button type="button"
+                                                class="toolbarButton new-tab"
+                                                title="Quitar archivo" 
+                                                (click)="limpiarPDF()">
+                                                <mat-icon class="text-info">delete</mat-icon>
+                                            </button>
+                                            
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                            <div class="row" >
+                                <div class="col-12">
+                                    <ul class="nav nav-pills nav-pills-info justify-content-center"
+                                        role="tablist"  >
+                                        <li class="nav-item">
+                                            <a class="nav-link active"
+                                                data-toggle="tab"
+                                                href="#link01"
+                                                role="tablist">
+                                                INTRODUCCIÓN
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" 
+                                            data-toggle="tab"
+                                            href="#link02"
+                                            role="tablist">
+                                                MANUAL
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" 
+                                                data-toggle="tab"
+                                                href="#link03"
+                                                role="tablist">
+                                                GUÍA
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" 
+                                                data-toggle="tab"
+                                                href="#link04"
+                                                role="tablist">
+                                                PDF
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    &nbsp;
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active"
+                                             id="link01">
+                                             
+                                        </div>
+                                        <div class="tab-pane"
+                                             id="link02">
+                                             
+                                        </div>
+                                        <div class="tab-pane"
+                                             id="link03">
+                                             
+                                        </div>
+                                        <div class="tab-pane" 
+                                             id="link04">
+                                             
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="w-100 d-flex flex-row justify-content-end">
+                                <input type="button"
+                                       class="btn btn-previous rounded
+                                              col-6 col-sm-3 col-md-3 col-lg-3 col-xl-2"
+                                       name="cancelar"
+                                                                        
+                                       value="Cancelar">
+
+                                <input type="submit"
+                                       class="btn btn-fill btn-info rounded
+                                              col-6 col-sm-3 col-md-3 col-lg-3 col-xl-2"
+                                      
+                                       name="grabar" id="grabar"
+                                       value="Grabar">
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
