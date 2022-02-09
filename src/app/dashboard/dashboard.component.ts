@@ -17,5 +17,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         console.log('limpiar pdf');
 
         this.valorURLPDF = '';
+        setTimeout( () => this.valorURLPDF = "/assets/base.pdf", 10)
     }
 }

@@ -91,7 +91,7 @@ export class MaterialModule {}
         BrowserAnimationsModule,
         FormsModule,
         RouterModule.forRoot(AppRoutes,{
-          useHash: true
+          useHash: false
         }),
         HttpClientModule,
         NgxExtendedPdfViewerModule,
